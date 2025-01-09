@@ -1,0 +1,14 @@
+.git
+.gitignore
+.env*
+node_modules/
+npm-debug.log
+README.md
+.vscode/
+.idea/
+*.log
+coverage/
+.bolt/
+.dockerignore
+Dockerfile
+cloudbuild.yaml

@@ -1,0 +1,14 @@
+.git
+.gitignore
+.env*
+.next
+node_modules
+npm-debug.log
+README.md
+.vscode
+.idea
+*.log
+out/
+coverage/
+.bolt/
+.gcloudignore

@@ -1,0 +1,30 @@
+name: qurankareem
+services:
+  - name: web
+    git:
+      branch: main
+      repo_clone_url: ${_REPO_URL}
+    build_command: npm run build
+    run_command: npm start
+    envs:
+      - key: NODE_ENV
+        value: production
+      - key: NEXT_PUBLIC_API_BASE
+        value: https://api.qurancdn.com/api/qdc
+      - key: NEXT_PUBLIC_AUDIO_BASE
+        value: https://everyayah.com/data
+      - key: NEXT_PUBLIC_BASE_URL
+        value: ${APP_URL}
+      - key: NEXT_PUBLIC_ENABLE_ANALYTICS
+        value: "true"
+      - key: NEXT_PUBLIC_ENABLE_ADSENSE
+        value: "true"
+      - key: NEXT_PUBLIC_ENABLE_OFFLINE_MODE
+        value: "true"
+      - key: NEXT_PUBLIC_ENABLE_DEBUG
+        value: "false"
+    http_port: 8080
+    instance_count: 1
+    instance_size_slug: basic-xxs
+    routes:
+      - path: /
